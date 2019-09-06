@@ -45,4 +45,4 @@ grocery_cart = [
 ]
 
 grocery_cart = consolidate_cart(grocery_cart)
-p apply_coupons(grocery_cart)
+p apply_coupons(grocery_cart, coupons)
