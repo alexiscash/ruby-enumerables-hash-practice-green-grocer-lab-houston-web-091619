@@ -9,7 +9,6 @@ def consolidate_cart(cart)
       new_cart[first][:count] = 1 
     end
   end
-  
   new_cart
 end
 
@@ -31,7 +30,6 @@ def apply_coupons(cart, coupons)
           item[:count] -= coupon[:num]
         end
       end
-      
     end
   end 
   cart
