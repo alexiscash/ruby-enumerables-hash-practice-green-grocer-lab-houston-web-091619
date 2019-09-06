@@ -67,5 +67,5 @@ grocery_cart = [
 ]
 
 new_grocery_cart = consolidate_cart(grocery_cart)
-#p apply_coupons(new_grocery_cart, coupons)
-p checkout(grocery_cart, coupons)
+p apply_coupons(new_grocery_cart, coupons)
+#p checkout(grocery_cart, coupons)
