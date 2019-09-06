@@ -17,7 +17,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     if cart.include?(coupon[:item])
       item = cart[coupon[:item]]
-      puts cart[item], item[:price] * item[:count]
+      puts item, item[:price] * item[:count]
     end
   end 
   cart
