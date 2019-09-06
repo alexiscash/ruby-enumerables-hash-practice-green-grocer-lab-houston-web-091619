@@ -36,9 +36,11 @@ end
 def checkout(cart, coupons)
   cart = consolidate_cart(cart)
   cart = apply_clearance(cart)
+  total = 0
   cart.each do |item, attributes|
-    puts 
+    puts total += (attributes[:price] * attributes[:count])
   end 
+  total
 end
 
 coupons = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
