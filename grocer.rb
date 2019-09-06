@@ -17,12 +17,13 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     if cart.include?(coupon[:item])
       item = cart[coupon[:item]]
-      cart[coupon[:item] + ' W/COUPON'] = {
-        price: coupon[:cost] / coupon[:num],
-        clearance: item[:clearance],
-        count: coupon[:num]
-      }
-      item[:count] -= coupon[:num]
+      if item[:count] >= coupon[:num]
+        cart[coupon[:item] + ' W/COUPON'] = {
+          price: coupon[:cost] / coupon[:num],
+          clearance: item[:clearance],
+          count: coupon[:num]
+        }
+        item[:count] -= coupon[:num]
       
     end
   end 
