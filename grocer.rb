@@ -47,7 +47,7 @@ coupons = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
 grocery_cart = [
   {"AVOCADO" => {:price => 3.00, :clearance => true }},
   {"AVOCADO" => {:price => 3.00, :clearance => true }},
-  {"KALE"    => {:price => 100.0, :clearance => false}}
+  {"KALE"    => {:price => 3.00, :clearance => false}}
 ]
 
 p checkout(grocery_cart, coupons)
