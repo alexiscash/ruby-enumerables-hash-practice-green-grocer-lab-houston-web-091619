@@ -36,7 +36,7 @@ end
 def checkout(cart, coupons)
   cart = consolidate_cart(cart)
   cart = apply_clearance(cart)
-  cart.reduce do |memo, n|
+  cart.each do |memo, n|
     puts memo, n
   end 
 end
