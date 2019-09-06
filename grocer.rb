@@ -19,7 +19,7 @@ def apply_coupons(cart, coupons)
       puts cart[coupon[:item]]
     end
   end 
-  cart
+ # cart
 end
 
 
