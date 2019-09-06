@@ -50,4 +50,6 @@ grocery_cart = [
   {"KALE"    => {:price => 3.00, :clearance => false}}
 ]
 
+new_grocery_cart = consolidate_cart(grocery_cart)
+p apply_coupons(new_grocery_cart)
 p checkout(grocery_cart, coupons)
