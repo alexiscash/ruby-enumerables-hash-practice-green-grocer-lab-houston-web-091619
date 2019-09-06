@@ -34,7 +34,8 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  # code here
+  cart = consolidate_cart(cart)
+  cart
 end
 
 coupons = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
@@ -45,4 +46,4 @@ grocery_cart = [
 ]
 
 grocery_cart = consolidate_cart(grocery_cart)
-p apply_coupons(grocery_cart, coupons)
+p checkout(grocery_cart, coupons)
