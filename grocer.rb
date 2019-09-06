@@ -36,7 +36,9 @@ end
 def checkout(cart, coupons)
   cart = consolidate_cart(cart)
   cart = apply_clearance(cart)
-  cart
+  cart.reduce do |memo, n|
+    puts memo, n
+  end 
 end
 
 coupons = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
