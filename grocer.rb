@@ -21,6 +21,7 @@ def apply_coupons(cart, coupons)
         item_w_coupon = coupon[:item] + ' W/COUPON'
         if cart.include?(item_w_coupon)
           cart[item_w_coupon][:count] += coupon[:num]
+          item[:count] -= coupon[:num]
         else
           cart[coupon[:item] + ' W/COUPON'] = {
             price: coupon[:cost] / coupon[:num],
