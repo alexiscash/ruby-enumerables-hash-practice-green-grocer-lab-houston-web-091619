@@ -19,7 +19,7 @@ def apply_coupons(cart, coupons)
       puts cart[coupon[:item]]
     end
   end 
- # cart
+  cart
 end
 
 
@@ -51,5 +51,5 @@ grocery_cart = [
 ]
 
 new_grocery_cart = consolidate_cart(grocery_cart)
-p apply_coupons(new_grocery_cart, coupons)
+apply_coupons(new_grocery_cart, coupons)
 #p checkout(grocery_cart, coupons)
